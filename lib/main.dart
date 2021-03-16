@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import './screens/home.dart';
+import 'package:google_auth_app/screens/home.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(MyApp());
 }
 
@@ -16,7 +19,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: HomeScreen(title: 'Google Auth Example App'),
+      home: HomeScreen(title: 'Flutter Demo Home Page'),
     );
   }
 }
