@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_auth_app/widgets/logged.dart';
 import 'package:google_auth_app/widgets/login.dart';
 import 'package:provider/provider.dart';

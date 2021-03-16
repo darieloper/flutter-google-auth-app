@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:google_auth_app/provider/google_auth.dart';
 
 class LoggedWidget extends StatelessWidget {
   @override
@@ -13,15 +14,18 @@ class LoggedWidget extends StatelessWidget {
         mainAxisSize: MainAxisSize.max,
         children: [
           Text(
-            'Logged Successfully',
-            style: TextStyle(fontSize: 17),
-          ),
-          Text(
-            'Hello ${currentUser.displayName}',
-            style: TextStyle(fontSize: 17, color: Colors.grey),
+            '🎉 Logged Successfully 🎉',
+            style: TextStyle(fontSize: 22),
           ),
           Padding(
-              padding: EdgeInsets.all(20),
+            padding: EdgeInsets.all(10),
+            child: Text(
+              'Hello ${currentUser.displayName}',
+              style: TextStyle(fontSize: 17, color: Colors.grey),
+            ),
+          ),
+          Padding(
+              padding: EdgeInsets.all(10),
               child: FlatButton(
                 onPressed: () {
                   final provider = Provider.of<GoogleSignAuthProvider>(context,
